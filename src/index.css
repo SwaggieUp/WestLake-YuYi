@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-green: #2D5A27;
+  --color-mist-grey: #F2F2F2;
+  --color-earth-brown: #8C7355;
+  --font-serif: "Noto Serif SC", serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-mist-grey);
+    color: var(--color-ink-green);
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
+}
+
+.mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-bottom-left {
+  display: none !important;
+}
+
+.custom-marker {
+  cursor: pointer;
+}
+
+.landmark-label {
+  pointer-events: none;
+  user-select: none;
+}
+
+.mapboxgl-ctrl-compass {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-zoom {
+  border-radius: 0 !important;
+  border: 1px solid rgba(45, 90, 39, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.mapboxgl-ctrl-group button {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3d1a;
+}
+
